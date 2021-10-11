@@ -1,9 +1,12 @@
 {
   "name": "root",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "scripts": {
+    "test": "bash ./scripts/test.cmd",
+    "clone:all": "bash ./scripts/clone-all.sh",
+    "pull": "bash ./scripts/pull.sh",
+    "install": "lerna bootstrap"
+  },
   "devDependencies": {
     "lerna": "^4.0.0"
   }
