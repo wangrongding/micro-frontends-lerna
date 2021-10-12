@@ -1396,6 +1396,11 @@ color-name@~1.1.4:
   resolved "https://registry.npm.taobao.org/color-name/download/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha1-wqCah6y95pVD3m9j+jmVyCbFNqI=
 
+colors-cli@^1.0.26:
+  version "1.0.28"
+  resolved "https://registry.nlark.com/colors-cli/download/colors-cli-1.0.28.tgz#edce4c6f86acaeb58910887be87ab801b833d220"
+  integrity sha1-7c5Mb4asrrWJEIh76Hq4Abgz0iA=
+
 columnify@^1.5.4:
   version "1.5.4"
   resolved "https://registry.npm.taobao.org/columnify/download/columnify-1.5.4.tgz#4737ddf1c7b69a8a7c340570782e947eec8e78bb"
@@ -2961,6 +2966,13 @@ load-json-file@^6.2.0:
     parse-json "^5.0.0"
     strip-bom "^4.0.0"
     type-fest "^0.6.0"
+
+loading-cli@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmmirror.com/loading-cli/download/loading-cli-1.1.0.tgz#3457edaa3290439ad0061755174363a8091d56bc"
+  integrity sha1-NFftqjKQQ5rQBhdVF0NjqAkdVrw=
+  dependencies:
+    colors-cli "^1.0.26"
 
 locate-path@^2.0.0:
   version "2.0.0"

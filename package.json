@@ -1,14 +1,14 @@
 {
-  "name": "root",
-  "private": true,
-  "scripts": {
-    "test": "bash ./scripts/test.cmd",
-    "clone:all": "bash ./scripts/clone-all.sh",
-    "pull": "bash ./scripts/pull.sh",
-    "install": "lerna bootstrap"
-  },
-  "devDependencies": {
-    "download-git-repo": "^3.0.2",
-    "lerna": "^4.0.0"
-  }
+	"name": "root",
+	"private": true,
+	"scripts": {
+		"test": "echo \"test,test,test\" && exit 0",
+		"clone": "node .\/scripts\/clone.js",
+		"pull": "bash ./scripts/pull.sh",
+		"install": "lerna bootstrap"
+	},
+	"devDependencies": {
+		"download-git-repo": "^3.0.2",
+		"lerna": "^4.0.0"
+	}
 }

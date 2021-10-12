@@ -1,41 +1,52 @@
-var download = require("download-git-repo");
+const download = require("download-git-repo");
+const util = require("util");
+const downloadGitRepo = util.promisify(download);
+//loading
+const loading = require("loading-cli");
 
-console.log("请耐心等待,各应用正在clone...");
+//==============================================================
 
-/* let repos = [
+let repos = [
 	{
-		repoUrl:
-			"direct:https://gitlab.com/flippidippi/download-git-repo-fixture.git#my-branch",
-		repoName: "test",
+		repoUrl: "direct:https://gitee.com/wangrongding/test22222#master",
+		repoName: "test22222",
 	},
 	{
-		repoUrl:
-			"direct:https://gitlab.com/flippidippi/download-git-repo-fixture.git#my-branch",
-		repoName: "test1",
-	},
-	{
-		repoUrl:
-			"direct:https://gitlab.com/flippidippi/download-git-repo-fixture.git#my-branch",
-		repoName: "test22",
+		repoUrl: "direct:https://gitee.com/wangrongding/test-repo1#master",
+		repoName: "test-repo1",
 	},
 ];
 
-repos.forEach((item, index) => {
-	download(
-		item.repoUrl,
-		"../packages/" + item.repoUrl,
+async function clone(repoUrl, repoName) {
+	const load = loading("请耐心等待,各应用正在clone...").start();
+	await downloadGitRepo(
+		repoUrl,
+		"../packages/" + (new Date() - 0),
+		// "../packages/" + repoName,
 		{ clone: true },
-		function (err) {
-			console.log(err ? "Error!clone出错,请重新尝试!" + err : "Success~");
+		(err) => {
+			load.stop();
+			console.log(
+				err
+					? `Error ! clone${repoName} 出错! ,请检查是否已有该仓库或选择重新尝试!${err}`
+					: `Success ~ clone ${repoName}完成!`
+			);
 		}
 	);
-}); */
+}
 
-download(
-	"direct:https://gitlab.com/flippidippi/download-git-repo-fixture.git#my-branch",
-	"../packages/test123",
+repos.forEach(async (item) => {
+	await clone(item.repoUrl, "../packages/" + item.repoName);
+});
+//====================================================================
+// downloadGitRepo(item.repoUrl, "../packages/" + item.repoName);
+
+//====================================================================
+/* download(
+	"direct:https://gitee.com/wangrongding/test22222#master",
+	"../packages/test1",
 	{ clone: true },
 	(err) => {
 		console.log(err ? "Error!clone出错,请重新尝试!" + err : "Success~");
 	}
-);
+); */
