@@ -2,9 +2,9 @@
 
 # 子仓库一
 
-echo "1234"
+# echo "1234"
 # cd ../packages
-# git clone https://github.com/wangrongding/TF-boy.git
+git clone https://github.com/wangrongding/TF-boy.git
 
 # 子仓库二
 # cd packages && git https://github.com/wangrongding/image-processing.git
