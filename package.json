@@ -8,6 +8,7 @@
     "install": "lerna bootstrap"
   },
   "devDependencies": {
+    "download-git-repo": "^3.0.2",
     "lerna": "^4.0.0"
   }
 }

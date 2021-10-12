@@ -1,9 +1,0 @@
-{
-  "name": "a",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "ding-trans": "^1.0.36"
-  }
-}
